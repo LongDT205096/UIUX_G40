@@ -5,6 +5,7 @@ from view.home import home_bp
 from view.auth import auth_bp
 from view.message import message_bp
 
+from view.project import project_bp
 from view.notification import notification_bp
 
 app = Flask(__name__)
