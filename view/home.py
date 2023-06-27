@@ -11,4 +11,4 @@ def index():
     if not is_authenticated:
         return redirect(url_for('auth.login'))
 
-    return render_template('home/index.html', username=username)
+    return render_template('home/index.html', username=username, active_home='active')

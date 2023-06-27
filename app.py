@@ -5,6 +5,7 @@ from view.home import home_bp
 from view.auth import auth_bp
 from view.message import message_bp
 
+from view.notification import notification_bp
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -12,6 +13,8 @@ app.config.from_object(Config)
 app.register_blueprint(auth_bp)
 app.register_blueprint(home_bp)
 app.register_blueprint(message_bp)
+app.register_blueprint(project_bp)
+app.register_blueprint(notification_bp)
 
 
 if __name__ == '__main__':

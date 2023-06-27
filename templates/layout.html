@@ -37,7 +37,7 @@
       <div class="sidebar-menus bg-white dark:bg-slate-800 py-2 px-4 h-[calc(100%-80px)] overflow-y-auto z-50" id="sidebar_menus">
           <ul class="sidebar-menu">
             <li class="">
-              <a href="/" class="navItem active">
+              <a href="/" class="navItem {{ active_home }}">
                 <span class="flex items-center">
                   <iconify-icon class=" nav-icon" icon="heroicons-outline:view-boards"></iconify-icon>
                   <span>Home</span>
@@ -45,14 +45,14 @@
               </a>
             </li>
             <li>
-              <a href="/" class="navItem">
+              <a href="/messages" class="navItem {{ active_message }}">
                 <span class="flex items-center">
               <iconify-icon class="nav-icon" icon="heroicons-outline:chat"></iconify-icon>
               <span>Messages</span>
                 </span>
               </a>
             <li class="">
-              <a href="/projects" class="navItem">
+              <a href="/projects" class="navItem {{ active_project }}">
                 <span class="flex items-center">
                   <iconify-icon class=" nav-icon" icon="ant-design:project-outlined"></iconify-icon>
                   <span>Projects</span>
@@ -60,7 +60,7 @@
               </a>
             </li>
             <li class="">
-              <a href="/notifications" class="navItem">
+              <a href="/notifications" class="navItem {{ active_notification }} ">
                 <span class="flex items-center">
                   <iconify-icon class=" nav-icon" icon="mingcute:notification-line"></iconify-icon>
                   <span>Notification</span>
