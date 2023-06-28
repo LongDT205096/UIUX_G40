@@ -4,7 +4,7 @@
 (function ($) {
   var currentPageUrl = window.location.href;
   var currentLink = currentPageUrl.split("/");
-  var Href = currentLink[currentLink.length - 1];
+  var Href = "/" + currentLink[currentLink.length - 1];
   $('a[href="' + Href + '"]').addClass("active");
   var ParentUl = $("a.active").parent().parent();
   $(ParentUl).addClass("menu-open");

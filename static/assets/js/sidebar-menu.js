@@ -5,8 +5,10 @@ $.sidebarMenu = function(menu) {
   $(menu).on('click', 'li a', function(e) {
     var $this = $(this);
     var checkElement = $this.next();
+    console.log(checkElement);
 
     if (checkElement.is(subMenuSelector) && checkElement.is(':visible')) {
+      console.log(1)
       checkElement.slideUp(animationSpeed, function() {
         checkElement.removeClass('menu-open');
       });
@@ -15,8 +17,10 @@ $.sidebarMenu = function(menu) {
 
     //If the menu is not visible
     else if ((checkElement.is(subMenuSelector)) && (!checkElement.is(':visible'))) {
+      console.log(2)
       //Get the parent menu
       var parent = $this.parents('ul').first();
+      console.log(parent)
       //Close all open menus within the parent
       var ul = parent.find('ul:visible').slideUp(animationSpeed);
       //Remove the menu-open class from the parent
