@@ -11,7 +11,7 @@ def index():
     if not is_authenticated:
         return redirect(url_for('auth.login'))
 
-    return render_template('project/index.html', username=username, active_project='active')
+    return render_template('project/index.html', username=username)
 
 
 @project_bp.route('/project/<id>')
@@ -22,4 +22,4 @@ def detail(id):
     if not is_authenticated:
         return redirect(url_for('auth.login'))
 
-    return render_template('project/detail.html', username=username, active_project='active', project_name='Project Name')
+    return render_template('project/detail.html', username=username, project_name='Pro')
