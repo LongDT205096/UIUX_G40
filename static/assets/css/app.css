@@ -1234,6 +1234,7 @@ textarea.form-control.is-invalid{
 .modal-dialog{
   margin: 0.5rem;
 }
+
 .modal.fade .modal-dialog{
   -webkit-transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
@@ -4731,10 +4732,14 @@ textarea.form-control.is-invalid{
 .w-auto{
   width: auto;
 }
+
 .w-10{
   width: 2.5rem;
 }
 .w-\[320px\]{
+  width: 320px;
+}
+.w-\[1000px\]{
   width: 320px;
 }
 .w-\[2px\]{
@@ -15869,6 +15874,9 @@ ul.custom-list ul li{
   }
   .lg\:w-\[576px\]{
     width: 576px;
+  }
+  .lg\:w-\[1000px\]{
+    width: 1000px;
   }
   .lg\:w-1\/2{
     width: 50%;
