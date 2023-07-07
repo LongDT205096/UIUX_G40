@@ -1,0 +1,20 @@
+services:
+  postgres_ktpmg63_db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "postgres-uiux-image"
+    container_name: ${PG_CONTAINER_NAME}
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: ${PGDATA}
+    volumes:
+       - db_uiux:/data/postgres-ktpmg63
+    ports:
+      - "5435:5432"
+    restart: unless-stopped
+volumes:
+    db_uiux:
+      external: true

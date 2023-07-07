@@ -1,0 +1,232 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class=" font-inter dashcode-app" id="body_class">
+  <!-- [if IE]> <p class="browserupgrade"> You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security. </p> <![endif] -->
+    <div class="flex flex-col justify-between min-h-screen">
+      <div>
+        <!-- BEGIN: Search Modal -->
+        <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+          <div class="modal-dialog relative w-auto pointer-events-none top-1/4">
+            <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white dark:bg-slate-900 bg-clip-padding rounded-md outline-none text-current">
+              <form>
+                <div class="relative">
+                  <input type="text" class="form-control !py-3 !pr-12" placeholder="Search">
+                  <button class="absolute right-0 top-1/2 -translate-y-1/2 w-9 h-full border-l text-xl border-l-slate-200 dark:border-l-slate-600 dark:text-slate-300 flex items-center justify-center">
+                    <iconify-icon icon="heroicons-solid:search"></iconify-icon>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- END: Search Modal -->
+        <!-- END: Header -->
+        <!-- END: Header -->
+
+          <div class="page-content">
+            <div class=" md:flex justify-between items-center">
+              <div>
+
+                <!-- BEGIN: Breadcrumb -->
+                <div class="mb-5">
+                  <ul class="m-0 p-0 list-none">
+                    <li class="inline-block relative top-[3px] text-base text-primary-500 font-Inter ">
+                      <a href="index.html">
+                        <iconify-icon icon="heroicons-outline:home"></iconify-icon>
+                        <iconify-icon icon="heroicons-outline:chevron-right" class="relative text-slate-500 text-sm rtl:rotate-180"></iconify-icon>
+                      </a>
+                    </li>
+                    <li class="inline-block relative text-sm text-slate-500 font-Inter dark:text-white">
+                      Profile</li>
+                  </ul>
+                </div>
+                <!-- END: BreadCrumb -->
+                <div class="space-y-5 profile-page">
+                  <div class="profiel-wrap px-[35px] pb-10 md:pt-[84px] pt-10 rounded-lg bg-white dark:bg-slate-800 lg:flex lg:space-y-0
+                space-y-6 justify-between items-end relative z-[1]">
+                    <div class="bg-slate-900 dark:bg-slate-700 absolute left-0 top-0 md:h-1/2 h-[150px] w-full z-[-1] rounded-t-lg"></div>
+                    <div class="profile-box flex-none md:text-start text-center">
+                      <div class="md:flex items-end md:space-x-6 rtl:space-x-reverse">
+                        <div class="flex-none">
+                          <div class="md:h-[186px] md:w-[186px] h-[140px] w-[140px] md:ml-0 md:mr-0 ml-auto mr-auto md:mb-0 mb-4 rounded-full ring-4
+                                ring-slate-100 relative">
+                            <img src="static/assets/images/users/269444609_468134754830849_2798359065838785136_n.png" alt="" class="w-full h-full object-cover rounded-full">
+                            <a href="profile-setting" class="absolute right-2 h-8 w-8 bg-slate-50 text-slate-600 rounded-full shadow-sm flex flex-col items-center
+                                    justify-center md:top-[140px] top-[100px]">
+                              <iconify-icon icon="heroicons:pencil-square"></iconify-icon>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="flex-1">
+                          <div class="text-2xl font-medium text-slate-900 dark:text-slate-200 mb-[3px]">
+                            Albert Flores
+                          </div>
+                          <div class="text-sm font-light text-slate-600 dark:text-slate-400">
+                            Front End Developer
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end profile box -->
+                    <div class="profile-info-500 md:flex md:text-start text-center flex-1 max-w-[516px] md:space-y-0 space-y-4">
+
+                      <!-- end single -->
+                      <div class="flex-1">
+                        <div class="text-base text-slate-900 dark:text-slate-300 font-medium mb-1">
+                          200
+                        </div>
+                        <div class="text-sm text-slate-600 font-light dark:text-slate-300">
+                          Board Card
+                        </div>
+                      </div>
+                      <!-- end single -->
+                      <div class="flex-1">
+                        <div class="text-base text-slate-900 dark:text-slate-300 font-medium mb-1">
+                          3200
+                        </div>
+                        <div class="text-sm text-slate-600 font-light dark:text-slate-300">
+                          Calender Events
+                        </div>
+
+                      </div>
+                      <div>
+                        <button
+                            class="btn inline-flex justify-center btn-dark w-full"
+                            data-bs-toggle="modal"
+                            data-bs-target="#newTodoModal">
+                            <span class="flex items-center">
+                                <iconify-icon icon="heroicons-outline:pencil-alt"></iconify-icon>
+                                <span>Edit</span>
+                            </span>
+                        </button>
+                    </div>
+                      <!-- end single -->
+                    </div>
+                    <!-- profile info-500 -->
+                  </div>
+                  <div class="grid grid-cols-12 gap-6">
+                    <div class="lg:col-span-4 col-span-12">
+                      <div class="card h-full">
+                        <header class="card-header">
+                          <h4 class="card-title">Info</h4>
+                        </header>
+                        <div class="card-body p-6">
+                          <ul class="list space-y-8">
+                            <li class="flex space-x-3 rtl:space-x-reverse">
+                              <div class="flex-none text-2xl text-slate-600 dark:text-slate-300">
+                                <iconify-icon icon="heroicons:envelope"></iconify-icon>
+                              </div>
+                              <div class="flex-1">
+                                <div class="uppercase text-xs text-slate-500 dark:text-slate-300 mb-1 leading-[12px]">
+                                  EMAIL
+                                </div>
+                                <a href="mailto:someone@example.com" class="text-base text-slate-600 dark:text-slate-50">
+                                  info-500@dashcode.com
+                                </a>
+                              </div>
+                            </li>
+                            <!-- end single list -->
+                            <li class="flex space-x-3 rtl:space-x-reverse">
+                              <div class="flex-none text-2xl text-slate-600 dark:text-slate-300">
+                                <iconify-icon icon="heroicons:phone-arrow-up-right"></iconify-icon>
+                              </div>
+                              <div class="flex-1">
+                                <div class="uppercase text-xs text-slate-500 dark:text-slate-300 mb-1 leading-[12px]">
+                                  PHONE
+                                </div>
+                                <a href="tel:0189749676767" class="text-base text-slate-600 dark:text-slate-50">
+                                  +1-202-555-0151
+                                </a>
+                              </div>
+                            </li>
+                            <!-- end single list -->
+                            <li class="flex space-x-3 rtl:space-x-reverse">
+                              <div class="flex-none text-2xl text-slate-600 dark:text-slate-300">
+                                <iconify-icon icon="heroicons:map"></iconify-icon>
+                              </div>
+                              <div class="flex-1">
+                                <div class="uppercase text-xs text-slate-500 dark:text-slate-300 mb-1 leading-[12px]">
+                                  LOCATION
+                                </div>
+                                <div class="text-base text-slate-600 dark:text-slate-50">
+                                  Home# 320/N, Road# 71/B, Mohakhali, Dhaka-1207, Bangladesh
+                                </div>
+                              </div>
+                            </li>
+                            <!-- end single list -->
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lg:col-span-8 col-span-12">
+                      <div class="card ">
+                        <header class="card-header">
+                          <h4 class="card-title">User Overview
+                          </h4>
+                        </header>
+                        <div class="card-body">
+                          <div id="areaChart"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <!-- BEGIN: Footer For Desktop and tab -->
+
+
+      <div class="bg-white bg-no-repeat custom-dropshadow footer-bg dark:bg-slate-700 flex justify-around items-center
+    backdrop-filter backdrop-blur-[40px] fixed left-0 bottom-0 w-full z-[9999] bothrefm-0 py-[12px] px-4 md:hidden">
+        <a href="chat.html">
+          <div>
+            <span class="relative cursor-pointer rounded-full text-[20px] flex flex-col items-center justify-center mb-1 dark:text-white
+          text-slate-900 ">
+        <iconify-icon icon="heroicons-outline:mail"></iconify-icon>
+        <span class="absolute right-[5px] lg:hrefp-0 -hrefp-2 h-4 w-4 bg-red-500 text-[8px] font-semibold flex flex-col items-center
+            justify-center rounded-full text-white z-[99]">
+          10
+        </span>
+            </span>
+            <span class="block text-[11px] text-slate-600 dark:text-slate-300">
+        Messages
+      </span>
+          </div>
+        </a>
+        <a href="profile.html" class="relative bg-white bg-no-repeat backdrop-filter backdrop-blur-[40px] rounded-full footer-bg dark:bg-slate-700
+      h-[65px] w-[65px] z-[-1] -mt-[40px] flex justify-center items-center">
+          <div class="h-[50px] w-[50px] rounded-full relative left-[0px] hrefp-[0px] custom-dropshadow">
+            <img src="assets/images/users/user-1.jpg" alt="" class="w-full h-full rounded-full border-2 border-slate-100">
+          </div>
+        </a>
+        <a href="#">
+          <div>
+            <span class=" relative cursor-pointer rounded-full text-[20px] flex flex-col items-center justify-center mb-1 dark:text-white
+          text-slate-900">
+        <iconify-icon icon="heroicons-outline:bell"></iconify-icon>
+        <span class="absolute right-[17px] lg:hrefp-0 -hrefp-2 h-4 w-4 bg-red-500 text-[8px] font-semibold flex flex-col items-center
+            justify-center rounded-full text-white z-[99]">
+          2
+        </span>
+            </span>
+            <span class=" block text-[11px] text-slate-600 dark:text-slate-300">
+        Notifications
+      </span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  <!-- scripts -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/rt-plugins.js"></script>
+  <script src="assets/js/app.js"></script>
+</div>
+{% endblock %}
