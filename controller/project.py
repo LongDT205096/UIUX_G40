@@ -14,7 +14,7 @@ def index():
     return render_template('project/index.html', username=username)
 
 
-@project_bp.route('/project/<id>')
+@project_bp.route('/projects/<id>')
 def detail(id):
     username = session.get('username')
     is_authenticated = session.get('is_authenticated')

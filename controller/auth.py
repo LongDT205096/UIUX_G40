@@ -11,7 +11,7 @@ def login():
         password = request.form.get('password')
 
         if username == 'group40_uiux@gmail.com' and password == 'admin':
-            session['username'] = username
+            session['username'] = 'Đinh Thành Long'
             session['is_authenticated'] = True
 
             time.sleep(1)
@@ -27,3 +27,14 @@ def logout():
 
     time.sleep(1)
     return redirect(url_for('auth.login'))
+
+
+@auth_bp.route('/profile')
+def profile():
+    username = session.get('username')
+    is_authenticated = session.get('is_authenticated')
+
+    if not is_authenticated:
+        return redirect(url_for('auth.login'))
+
+    return render_template('auth/profile.html', username=username)
