@@ -8,6 +8,7 @@ select.addEventListener('change', function() {
   } else {
     element.style.display = 'none';
   }
+<<<<<<< HEAD
 });
 
 const select_1 = document.getElementById('type');
@@ -21,3 +22,6 @@ select_1.addEventListener('change', function() {
     element_1.style.display = 'none';
   }
 });
+=======
+});
+>>>>>>> 1f73537cb9266ea41ea1387b6a31d347672cbba8
