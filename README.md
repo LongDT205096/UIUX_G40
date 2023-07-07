@@ -6,7 +6,7 @@ Thực hiện các bước như sau:
      pip install sqlalchemy<br />
      pip install psycopg2<br />
 
-2. Cài đặt docker từ website của Docker và thực hiện câu lệnh:
+2. Cài đặt docker từ website của Docker và thực hiện câu lệnh:<br />
    docker volume create db_uiux<br />
    docker-compose up -d<br />
 
