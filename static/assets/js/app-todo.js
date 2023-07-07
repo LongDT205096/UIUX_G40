@@ -1,5 +1,5 @@
 const todoFilters = document.querySelectorAll(".todo-categories li");
-const todoListItems = document.querySelectorAll(".todo-list li");
+const todoListItems = document.querySelectorAll("tbody.todo-list tr");
 const todoDeleteButtons = document.querySelectorAll(".delete-button");
 const todoNoResult = document.getElementById("no-result");
 
